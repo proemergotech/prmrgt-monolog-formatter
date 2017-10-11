@@ -1,0 +1,48 @@
+{
+  "name": "proemergotech/prmrgt-monolog-formatter",
+  "description": "Custom Monolog formatter for extracting custom key-values from log context. Uses RFC3339/ISO8601 datetime with microseconds by default.",
+  "keywords": [
+    "log",
+    "monolog",
+    "formatter"
+  ],
+  "type": "library",
+  "homepage": "https://github.com/proemergotech/prmrgt-monolog-formatter",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "ProEmergotech Kft",
+      "email": "support@proemergotech.com",
+      "homepage": "http://www.proemergotech.com/"
+    },
+    {
+      "name": "Miklós Boros",
+      "email": "miklos.boros@proemergotech.com"
+    },
+    {
+      "name": "Miklós Boros",
+      "email": "cherubmiki@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "monolog/monolog": "^1.23"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "~1.6",
+    "phpunit/phpunit": "^6.4",
+    "squizlabs/php_codesniffer": "^3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "ProEmergotech\\Logger\\Formatter\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ProEmergotech\\Logger\\Formatter\\Test\\": "test/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
