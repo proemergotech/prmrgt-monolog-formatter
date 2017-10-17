@@ -33,6 +33,6 @@ class PrmrgtLogFormatter extends NormalizerFormatter
         }
         $logMessageOutput .= '>##' . $this->toJson($record['context'], true);
 
-        return $logMessageOutput;
+        return $logMessageOutput . PHP_EOL;
     }
 }

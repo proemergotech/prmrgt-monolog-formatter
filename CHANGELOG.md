@@ -1,5 +1,11 @@
 # Release Notes
 
+## [0.1.2]
+
+### Added
+- PHP_EOL after all log messages
+- Adjusted test to match with the new log message format as well
+
 ## [0.1.1]
 
 ### Added

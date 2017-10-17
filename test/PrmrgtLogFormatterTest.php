@@ -35,7 +35,7 @@ class PrmrgtLogFormatterTest extends TestCase
         // Checks for proper formatting of log entry.
         $matchedParts = [];
         preg_match(
-            '/' . $regexPattern['iso8601'] . ' ' . $regexPattern['logLevel'] . ' (.*?) ##<(.*?)>##(.*)/',
+            '/' . $regexPattern['iso8601'] . ' ' . $regexPattern['logLevel'] . ' (.*?) ##<(.*?)>##(.*)' . PHP_EOL  . '/',
             $formattedLogEntry,
             $matchedParts
         );
@@ -51,7 +51,7 @@ class PrmrgtLogFormatterTest extends TestCase
             $this->assertFalse(strpos($matchedParts[4], $keyValueToExtract . '=') === false);
         }
 
-        $this->assertTrue(strlen($matchedParts[0]) === strlen($formattedLogEntry));
+        $this->assertTrue($matchedParts[0] === $formattedLogEntry);
     }
 
     public function logRecordProvider()
